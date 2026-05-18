@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { getEnv } from './env'
+import { getEnv } from './env.js'
 
 export function allowMethods(req: VercelRequest, res: VercelResponse, methods: string[]) {
   if (req.method && methods.includes(req.method)) return true

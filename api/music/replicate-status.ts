@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { requireUser } from '../_lib/auth'
-import { getEnv } from '../_lib/env'
-import { allowMethods, sendError, validateOrigin } from '../_lib/http'
+import { requireUser } from '../_lib/auth.js'
+import { getEnv } from '../_lib/env.js'
+import { allowMethods, sendError, validateOrigin } from '../_lib/http.js'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!allowMethods(req, res, ['GET'])) return

@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { requireUser } from '../_lib/auth'
-import { getEnv } from '../_lib/env'
-import { allowMethods, getJsonBody, sendError, validateOrigin } from '../_lib/http'
+import { requireUser } from '../_lib/auth.js'
+import { getEnv } from '../_lib/env.js'
+import { allowMethods, getJsonBody, sendError, validateOrigin } from '../_lib/http.js'
 
 type LyricsRequest = {
   idea: string

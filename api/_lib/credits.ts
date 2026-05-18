@@ -1,4 +1,4 @@
-import { createServiceClient } from './supabase'
+import { createServiceClient } from './supabase.js'
 
 export async function getCredits(userId: string) {
   const supabase = createServiceClient()

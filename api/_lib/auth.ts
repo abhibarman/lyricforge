@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import type { User } from '@supabase/supabase-js'
-import { createServiceClient } from './supabase'
+import { createServiceClient } from './supabase.js'
 
 export async function requireUser(req: VercelRequest, res: VercelResponse): Promise<User | null> {
   const token = req.headers.authorization?.replace(/^Bearer\s+/i, '')
